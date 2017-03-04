@@ -1,0 +1,125 @@
+<html>
+	<head>
+		<title>PRODUTOS</title>
+
+
+		<SCRIPT TYPE="text/javascript">
+		var listaProduto = [];
+		var estoqueEntrada = [];
+		var estoqueSaida= [];
+		do {
+				//Declarando variáveis globais
+				
+				var produto = {codigo: "", nome: "", preco:""};
+				var produtoItem = {nome: "", preco: "", quantidade: ""};
+
+				vopcao= prompt ( "1- Novo Produto \n 2- Nova Compra \n 3- Nova Venda \n 4-Relatórios \n 5- Sair" );
+				
+				op = parseInt(vopcao);
+
+
+				switch(op){
+					//cADASTRANDO PRODUTOS
+					case 1:
+							produto.codigo = prompt ("Código");
+							produto.nome = prompt ("Nome");
+							produto.preco = prompt ("Preço");
+							//Inserindo na lista de produto
+							listaProduto.push(produto);
+							console.log(listaProduto);
+							alert ("Produto Salvo!");
+						break;
+
+					//COMPRANDO PRODUTOS
+					case 2:
+						//Listando produtos de trabalho paraseleção da compra
+						text = "";
+						for (var i = 0; i < listaProduto.length; i++) {
+									//Inserindo incrementalmente os produtos concatenado com o pula linha
+									text += listaProduto[i].codigo + "- " + listaProduto[i].nome + "\n";
+								};
+						x = prompt ("Qual produto você deseja comprar\n" + text)-1;
+						
+						produtoItem.nome = listaProduto[x].nome;
+						produtoItem.preco = prompt ("Preço");
+						produtoItem.quantidade = prompt ("Quantidade");
+						//Inserindo  o produto no estoque de entrada
+						estoqueEntrada.push(produtoItem);
+						console.log(estoqueEntrada);
+						alert ("Compra realizada com sucesso!");
+						break;
+
+					//VENDENDO PRODUTOS
+					case 3:
+						text = "";
+						for (var i = 0; i < estoqueEntrada.length; i++) {
+									//listando produtos disponíveis em estoque 
+									text += estoqueEntrada[i].nome + " - " + estoqueEntrada[i].quantidade + "unidade(s)" + "\n";
+								};
+						x = prompt ("Dos produtos disponíveis em estoque,qual deseja comprar: \n" + text) -1;
+
+						produtoItem.nome = listaProduto[x].nome;
+						produtoItem.preco = listaProduto[x].preco;
+						produtoItem.quantidade = prompt ("Quantidade " + produtoItem.nome + " R$ " + produtoItem.preco);
+
+						//Inserindo o produto vendido no estoque de saída
+						estoqueSaida.push(produtoItem);
+						console.log(estoqueSaida);
+						alert ("Venda realizada com sucesso!");
+						break;
+
+
+					case 4:
+						//Submenu para os relatórios
+						vopcaoSubmenu = prompt ("1- Lista de Produto \n 2- Lista de Compra \n 3- Lista de Venda");
+						//Transformando a string em valor
+						ops = parseInt(vopcaoSubmenu);
+						text = "";
+
+						switch(ops){
+							//LISTA DE PRODUTOS CADASTRADOS
+							case 1:
+								for (var i = 0; i < listaProduto.length; i++) {
+									//Inserindo incrementalmente os produtos concatenado com o pula linha
+									text += listaProduto[i].nome+"\n";
+								};
+								alert (text)
+								break;
+
+							//LISTA DE PRODUTOS NO ESTOQUE DE ENTRADA
+							case 2:
+								for (var i = 0; i < estoqueEntrada.length; i++) {
+									//listando produtos do estoque de entrada
+									text += estoqueEntrada[i].nome + " - " + estoqueEntrada[i].quantidade + "unidade(s)" + "\n";
+								};
+								alert ("Nome e quantidade dos produtos: \n" + text);
+								break;
+
+							//LISTA DE PRODUTOS NO ESTOQUE DE SAIDA
+							case 3:
+								break
+						}
+						alert ("Relatórios em dia!");
+						break;
+
+					case 5:
+						confirm ("Tem certeza que você deseja sair?");
+						break;
+
+					break;
+			}
+
+
+
+		}while(vopcao != 5);
+			
+			
+		</SCRIPT>
+
+
+	</head>
+	<body>
+		
+	</body>
+
+</html>
