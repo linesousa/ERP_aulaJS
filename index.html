@@ -13,28 +13,55 @@
 				var produto = {codigo: "", nome: "", preco:""};
 				var produtoItem = {nome: "", preco: "", quantidade: ""};
 
-				vopcao= prompt ( "1- Novo Produto \n 2- Nova Compra \n 3- Nova Venda \n 4-Relatórios \n 5- Sair" );
-				
+				vopcao= prompt ( "1- Produto \n2- Compras \n3- Vendas \n4- Relatórios \n5- Sair" );
+				//A função 'parseInt' converte uma cadeia de caracteres em um número inteiro
 				op = parseInt(vopcao);
 
 
 				switch(op){
-					//cADASTRANDO PRODUTOS
+					//CADASTRO PRODUTOS
 					case 1:
-							produto.codigo = prompt ("Código");
-							produto.nome = prompt ("Nome");
-							produto.preco = prompt ("Preço");
-							//Inserindo na lista de produto
-							listaProduto.push(produto);
-							console.log(listaProduto);
-							alert ("Produto Salvo!");
+						//Submenu para o cadastro de produto
+						vopcaoSubmenu = prompt ("1- Novo Produto \n2- Editar Produto \n3- Excluir Produto");
+						//Transformando a string em valor
+						ops = parseInt(vopcaoSubmenu);
+						text = "";
+
+							switch(op){
+								case 1:
+									produto.codigo = prompt ("Código");
+									produto.nome = prompt ("Nome");
+									produto.preco = prompt ("Preço");
+									//Inserindo na lista de produto
+									listaProduto.push(produto);
+									console.log(listaProduto);
+									alert ("Produto salvo com sucesso!");
+								break;
+								
+								case 2:
+									//informando o produto que sofrerá edição
+									vnomeEdicao = prompt ("Informe o produto que deseja editar:");
+
+									//buscando o produto na lista de produtos;
+									for (var i = 0; i < listaProduto.length; i++) {
+										var contProduto = listaProduto.rows[i].cell[0].innertext;
+										var correspondente = vnomeEdicao.toLowerCase() >= 0;
+									};
+
+									alert("Produto alterado com sucesso!");
+								break;
+
+								case 3:
+									alert("Produto excluído com sucesso!";
+								break;
+								}
 						break;
 
 					//COMPRANDO PRODUTOS
 					case 2:
 						//Listando produtos de trabalho paraseleção da compra
 						text = "";
-						for (var i = 0; i < listaProduto.length; i++) {
+						for (var i = 0; i < listaProduto.rows.length; i++) {
 									//Inserindo incrementalmente os produtos concatenado com o pula linha
 									text += listaProduto[i].codigo + "- " + listaProduto[i].nome + "\n";
 								};
