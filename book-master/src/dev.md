@@ -10,9 +10,9 @@ e [Docker](https://www.docker.com/) para realização de integração contínua 
 > Obs2: Dentro da pasta build também será gerado um executável tests, com os testes unitários.
 Para compilar os projetos em modo de desenvolvimento, com debug e testes unitários basta executar os comandos: 
 
-### VSS-Core
+### VSS-State
 ```
-git clone https://github.com/VSS-SDK/VSS-Core
+git clone https://github.com/linesousa/VSS-Time-B-Robotica-Movel_2019/tree/master/VSS-State
 cd VSS-Core
 sudo ./configure.sh development
 ```
@@ -24,7 +24,7 @@ cd VSS-Vision
 sudo ./configure.sh development
 ```
 
-### VSS-Joystick
+### VSS-Command
 ```
 git clone https://github.com/VSS-SDK/VSS-Joystick
 cd VSS-Joystick
