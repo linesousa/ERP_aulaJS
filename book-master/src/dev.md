@@ -13,20 +13,17 @@ Para compilar os projetos em modo de desenvolvimento, com debug e testes unitár
 ### VSS-State
 ```
 git clone https://github.com/linesousa/VSS-Time-B-Robotica-Movel_2019/tree/master/VSS-State
-cd VSS-Core
-sudo ./configure.sh development
+cd VSS-State
 ```
 
 ### VSS-Vision
 ```
-git clone https://github.com/VSS-SDK/VSS-Vision
+git clone https://github.com/
 cd VSS-Vision
-sudo ./configure.sh development
 ```
 
 ### VSS-Command
 ```
-git clone https://github.com/VSS-SDK/VSS-Joystick
-cd VSS-Joystick
-sudo ./configure.sh development
+git clone https://github.com/
+cd VSS-Command
 ```
