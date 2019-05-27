@@ -1,8 +1,8 @@
-# Kotlin-para-Android
-Curso de Kotlin
+# VSS Time B Robótica 2019
+Disciplina de Robótica Móvel
 
-Processo de instalação:
-1 - Baixar e instalar o JDK;
-2 - Baixar e instalar o Android studio (versão 3.0 Preview que contém o Kotlin);
-2.1 - Arrastar o arquivo para Applications e rodar a instalação;
-3 - 
+
+Processo de criação:
+1 - Definição de requisitos para os Robôs VSS;
+2 - Codificação do firmware para controle dos robôs;
+3 - Codificação do software para identificação do estados dos robôs, seleção da estratégia e execução das ações dos indivíduos.
