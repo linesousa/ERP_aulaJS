@@ -2,7 +2,6 @@
 
 - [Visão Geral](general.md)
     - [Instalação](install.md)
-    - [Utilização](use.md)
     - [Desenvolvimento](dev.md)
     - [Exemplos](cpp_examples.md)
     - [Comunicação](communication.md)
