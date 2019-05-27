@@ -1,0 +1,5 @@
+[book]
+authors = ["Aline Sousa", "André Harada", "Caio Rodrigues", "Eric Löw", "Felipe Garcia", "Luiz Bossi", "Vinicius Teixeira"]
+multilingual = false
+src = "src"
+title = "VSS_Time_B_Robótica_2019"
